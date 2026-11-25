@@ -1,3 +1,6 @@
+# never include the .env file in version control
+.env
+
 # PyCharm IDE
 .idea/*
 
