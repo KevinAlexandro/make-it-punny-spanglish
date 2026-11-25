@@ -1,0 +1,180 @@
+{
+  "version": "1.0",
+  "theory_grounding": "Attardo & Raskin (1991) / Attardo (2020) General Theory of Verbal Humor (GTVH) + Asapu et al. (2025) 4 structured prompting strategies",
+  "held_out_pairs": [
+    {
+      "spanish_word": "hielo",
+      "spanish_ipa": "/ˈʝelo/",
+      "spanish_meaning": "ice",
+      "english_word": "yellow",
+      "english_ipa": "/ˈjɛloʊ/",
+      "english_meaning": "primary color",
+      "context_word": "color, sun, bright"
+    },
+    {
+      "spanish_word": "cruz",
+      "spanish_ipa": "/kɾus/",
+      "spanish_meaning": "cross",
+      "english_word": "cruise",
+      "english_ipa": "/kruz/",
+      "english_meaning": "ocean voyage",
+      "context_word": "ship, ocean, vacation"
+    },
+    {
+      "spanish_word": "balde",
+      "spanish_ipa": "/ˈbalde/",
+      "spanish_meaning": "bucket",
+      "english_word": "bald",
+      "english_ipa": "/bɔːld/",
+      "english_meaning": "hairless",
+      "context_word": "hair, head, barber"
+    },
+    {
+      "spanish_word": "ay",
+      "spanish_ipa": "/aj/",
+      "spanish_meaning": "ouch (expression of pain)",
+      "english_word": "eye",
+      "english_ipa": "/aɪ/",
+      "english_meaning": "organ of sight",
+      "context_word": "vision, doctor, glasses"
+    },
+    {
+      "spanish_word": "chisme",
+      "spanish_ipa": "/ˈtʃisme/",
+      "spanish_meaning": "gossip",
+      "english_word": "cheese",
+      "english_ipa": "/tʃiz/",
+      "english_meaning": "dairy food",
+      "context_word": "pizza, cheddar, snack"
+    }
+  ],
+  "methods": {
+    "baseline": {
+      "description": "Direct cross-lingual Spanglish pun generation grounded in GTVH script opposition and phonological similarity.",
+      "system": "You are a witty bilingual comedian fluent in Spanglish (Spanish-English code-mixing). Write ONE short, funny, natural-sounding Spanglish sentence that creates a cross-lingual phonetic pun using a Spanish Pun Word (Pw) in place of a similar-sounding English Alternate Word (Aw). Following Attardo's General Theory of Verbal Humor (GTVH), activate two contrasting semantic scripts (Pw's meaning and Aw's meaning) and use their phonetic similarity (IPA) as the logical mechanism that playfully bridges the incongruity. Output ONLY the final Spanglish pun sentence—no explanations, labels, or translations.",
+      "input_template": "Spanish Pun Word (Pw): {pw} {pw_ipa} ('{pw_meaning}') | English Alternate Word (Aw): {aw} {aw_ipa} ('{aw_meaning}')",
+      "few_shot": [
+        {
+          "input": "Spanish Pun Word (Pw): hielo /ˈʝelo/ ('ice') | English Alternate Word (Aw): yellow /ˈjɛloʊ/ ('primary color')",
+          "output": "I asked the painter for a bright sunny color, pero everything in my room ended up feeling freezing—puro hielo."
+        },
+        {
+          "input": "Spanish Pun Word (Pw): cruz /kɾus/ ('cross') | English Alternate Word (Aw): cruise /kruz/ ('ocean voyage')",
+          "output": "My abuela prayed for a peaceful ocean vacation, so she booked herself a seven-day cruz."
+        },
+        {
+          "input": "Spanish Pun Word (Pw): balde /ˈbalde/ ('bucket') | English Alternate Word (Aw): bald /bɔːld/ ('hairless')",
+          "output": "My tío went to the barber worried about losing his hair, and walked out shining like un balde."
+        },
+        {
+          "input": "Spanish Pun Word (Pw): ay /aj/ ('ouch; expression of pain') | English Alternate Word (Aw): eye /aɪ/ ('organ of sight')",
+          "output": "The optometrist accidentally poked me during my vision test, and all I could yell was 'mi ay!'"
+        },
+        {
+          "input": "Spanish Pun Word (Pw): chisme /ˈtʃisme/ ('gossip') | English Alternate Word (Aw): cheese /tʃiz/ ('dairy food')",
+          "output": "My tías love extra toppings on their pizza, especially when it's loaded with hot, fresh chisme."
+        }
+      ]
+    },
+    "contextually_aligned": {
+      "description": "Anchors the setup in English context keywords (Cw) tied to Aw so the listener anticipates Aw before pivoting into Spanish Pw.",
+      "system": "You are a witty bilingual comedian fluent in Spanglish (Spanish-English code-mixing). You are given a Spanish Pun Word (Pw), a phonetically similar English Alternate Word (Aw) with their IPA pronunciations, and English Context Keywords (Cw) related to Aw. Following Attardo's GTVH, establish a natural English/Spanglish scenario strongly anchored in Cw so the listener expects Aw's script, then pivot into Spanish and deliver Pw to trigger the second script through sound similarity. Output ONLY the final Spanglish pun sentence—no explanations or translations.",
+      "input_template": "Pw: {pw} {pw_ipa} ('{pw_meaning}') | Aw: {aw} {aw_ipa} ('{aw_meaning}') | Cw: {cw}",
+      "few_shot": [
+        {
+          "input": "Pw: hielo /ˈʝelo/ ('ice') | Aw: yellow /ˈjɛloʊ/ ('primary color') | Cw: color, sun, bright",
+          "output": "I wanted to paint my kitchen a bright, sunny color, pero when the winter bill hit, everything turned cold as hielo."
+        },
+        {
+          "input": "Pw: cruz /kɾus/ ('cross') | Aw: cruise /kruz/ ('ocean voyage') | Cw: ship, ocean, vacation",
+          "output": "After months of stressing about our ocean ship vacation, abuela just blessed our tickets and sent us on a seven-day cruz."
+        },
+        {
+          "input": "Pw: balde /ˈbalde/ ('bucket') | Aw: bald /bɔːld/ ('hairless') | Cw: hair, head, barber",
+          "output": "After years of fighting a receding hairline at the barber shop, mi tío finally gave up and went completely balde."
+        },
+        {
+          "input": "Pw: ay /aj/ ('ouch; expression of pain') | Aw: eye /aɪ/ ('organ of sight') | Cw: vision, doctor, glasses",
+          "output": "I went to the doctor for new glasses to fix my vision, pero when he shined that bright light right in my face, I screamed 'ay!'"
+        },
+        {
+          "input": "Pw: chisme /ˈtʃisme/ ('gossip') | Aw: cheese /tʃiz/ ('dairy food') | Cw: pizza, cheddar, snack",
+          "output": "We ordered a giant pizza for family night, pero my tías didn't care about cheddar—they just wanted extra chisme."
+        }
+      ]
+    },
+    "question_answer": {
+      "description": "Two-part Question-Answer joke where Q: sets up Aw/Cw and A: delivers the Spanglish punchline with Pw.",
+      "system": "You are a witty bilingual comedian fluent in Spanglish (Spanish-English code-mixing). Write ONE short, funny Question-and-Answer joke in Spanglish. Following Attardo's GTVH, the Question (Q:) must set up a scenario grounded in the English Context Keywords (Cw) and Alternate Word (Aw) while hinting at the Spanish Pun Word's (Pw) script, and the Answer (A:) must deliver the punchline using Pw via its phonetic similarity (IPA) to Aw. Output ONLY 'Q: ... A: ...' on a single line—no extra commentary.",
+      "input_template": "Pw: {pw} {pw_ipa} ('{pw_meaning}') | Aw: {aw} {aw_ipa} ('{aw_meaning}') | Cw: {cw}",
+      "few_shot": [
+        {
+          "input": "Pw: hielo /ˈʝelo/ ('ice') | Aw: yellow /ˈjɛloʊ/ ('primary color') | Cw: color, sun, bright",
+          "output": "Q: What bright color matches a freezing winter morning? A: Un poquito de hielo."
+        },
+        {
+          "input": "Pw: cruz /kɾus/ ('cross') | Aw: cruise /kruz/ ('ocean voyage') | Cw: ship, ocean, vacation",
+          "output": "Q: What kind of ocean vacation does a very religious abuela book? A: Una cruz por el Caribe."
+        },
+        {
+          "input": "Pw: balde /ˈbalde/ ('bucket') | Aw: bald /bɔːld/ ('hairless') | Cw: hair, head, barber",
+          "output": "Q: Why did the barber hand my hairless tío a mop? A: Porque su cabeza ya estaba completamente balde."
+        },
+        {
+          "input": "Pw: ay /aj/ ('ouch; expression of pain') | Aw: eye /aɪ/ ('organ of sight') | Cw: vision, doctor, glasses",
+          "output": "Q: What did I scream when the vision doctor accidentally poked my glasses? A: ¡Justo en el ay!"
+        },
+        {
+          "input": "Pw: chisme /ˈtʃisme/ ('gossip') | Aw: cheese /tʃiz/ ('dairy food') | Cw: pizza, cheddar, snack",
+          "output": "Q: What is the best topping to bring to a family pizza night with your tías? A: Extra chisme, bien calientito."
+        }
+      ]
+    },
+    "subject_masked_stage1": {
+      "description": "Stage 1 of Subject-Masked: generate a natural English context sentence with Aw replaced by [MASK].",
+      "system": "Write ONE natural, everyday English sentence (10-16 words) that naturally uses the given English target word (Aw) together with its context keywords (Cw), then replace ONLY the target word Aw with '[MASK]'. Output ONLY the masked English sentence—no quotes or explanations.",
+      "input_template": "Aw: {aw} {aw_ipa} ('{aw_meaning}') | Cw: {cw}",
+      "few_shot": [
+        {
+          "input": "Aw: yellow /ˈjɛloʊ/ ('primary color') | Cw: color, sun, bright",
+          "output": "The painter chose a bright, sunny shade of [MASK] for the kitchen walls."
+        },
+        {
+          "input": "Aw: cruise /kruz/ ('ocean voyage') | Cw: ship, ocean, vacation",
+          "output": "My grandparents spent their whole vacation relaxing on an ocean [MASK] ship."
+        },
+        {
+          "input": "Aw: bald /bɔːld/ ('hairless') | Cw: hair, head, barber",
+          "output": "After years of losing his hair, my uncle finally decided to shave his head [MASK]."
+        },
+        {
+          "input": "Aw: cheese /tʃiz/ ('dairy food') | Cw: pizza, cheddar, snack",
+          "output": "We ordered a giant late-night pizza loaded with extra melted [MASK]."
+        }
+      ]
+    },
+    "subject_masked_stage2": {
+      "description": "Stage 2 of Subject-Masked: infill [MASK] with Spanish Pw and adapt the sentence into natural Spanglish.",
+      "system": "You are a witty bilingual comedian fluent in Spanglish (Spanish-English code-mixing). You are given an English sentence containing '[MASK]' (where the English word Aw originally belonged) and a phonetically similar Spanish Pun Word (Pw). Replace '[MASK]' with Pw and naturally blend Spanish framing into the sentence so both semantic scripts (Aw's original context and Pw's Spanish meaning) clash playfully via sound similarity. Output ONLY the final Spanglish sentence—no explanations or translations.",
+      "input_template": "Masked Sentence: {masked_sentence} | Pw: {pw} {pw_ipa} ('{pw_meaning}') | Aw: {aw} {aw_ipa} ('{aw_meaning}')",
+      "few_shot": [
+        {
+          "input": "Masked Sentence: The painter chose a bright, sunny shade of [MASK] for the kitchen walls. | Pw: hielo /ˈʝelo/ ('ice') | Aw: yellow /ˈjɛloʊ/ ('primary color')",
+          "output": "El pintor escogió a bright, sunny shade of hielo for the kitchen walls, y ahora hace frío."
+        },
+        {
+          "input": "Masked Sentence: My grandparents spent their whole vacation relaxing on an ocean [MASK] ship. | Pw: cruz /kɾus/ ('cross') | Aw: cruise /kruz/ ('ocean voyage')",
+          "output": "Mis abuelos spent their whole vacation rezando on an ocean cruz."
+        },
+        {
+          "input": "Masked Sentence: After years of losing his hair, my uncle finally decided to shave his head [MASK]. | Pw: balde /ˈbalde/ ('bucket') | Aw: bald /bɔːld/ ('hairless')",
+          "output": "Después de años losing his hair, mi tío finally shaved his head y quedó todo balde."
+        },
+        {
+          "input": "Masked Sentence: We ordered a giant late-night pizza loaded with extra melted [MASK]. | Pw: chisme /ˈtʃisme/ ('gossip') | Aw: cheese /tʃiz/ ('dairy food')",
+          "output": "Pedimos una giant pizza con las tías, loaded with extra hot chisme."
+        }
+      ]
+    }
+  }
+}
