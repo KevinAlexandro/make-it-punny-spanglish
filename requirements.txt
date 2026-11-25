@@ -52,5 +52,8 @@ typing-inspection==0.4.5
 typing_extensions==4.16.0
 tzdata==2026.6
 urllib3==2.8.0
+google-genai
+python-dotenv
+tqdm
 wcwidth==0.9.5
 websockets==17.4
