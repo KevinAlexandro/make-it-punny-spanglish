@@ -1,0 +1,131 @@
+pair_id,spanish_word,english_word,context_word,spanish_ipa,english_ipa,spanish_meaning,english_meaning,phonetic_similarity,cognate_filter,pair_status,source
+1,sopa,soap,"cleansing agent, cleanser, cleaner",/ˈsopa/,/soʊp/,soup,cleaning substance,0.83,passed,accepted,seed_cleaned
+2,flor,floor,"horizontal surface, level, inside",/floɾ/,/flɔːr/,flower,bottom surface of a room,0.8,passed,accepted,seed_cleaned
+3,burro,burrow,"hole, hollow, animal",/ˈburo/,/ˈbɜroʊ/,donkey,hole dug by an animal,0.75,passed,accepted,seed_cleaned
+4,gato,ghetto,"quarter, formerly, restricted",/ˈɡato/,/ˈɡɛtoʊ/,cat,urban neighborhood,0.75,passed,accepted,seed_cleaned
+5,sol,soul,"spirit, immaterial, part",/sol/,/soʊl/,sun,spirit or essence,0.8,passed,accepted,seed_cleaned
+6,pez,pets,"animal, animate being, beast",/peθ/,/pɛts/,fish,companion animals,0.8,passed,accepted,seed_cleaned
+7,pan,pun,"fun, play, sport",/pan/,/pʌn/,bread,play on words,0.75,passed,accepted,seed_cleaned
+8,vino,beano,"board game, game, numbered",/ˈbino/,/ˈbiːnoʊ/,wine,British informal term for a bean feast,0.75,passed,accepted,seed_cleaned
+9,pelo,pillow,"cushion, support, head",/ˈpelo/,/ˈpɪloʊ/,hair,cushion for the head,0.7,passed,accepted,seed_cleaned
+10,velo,willow,"tree, numerous, deciduous",/ˈbelo/,/ˈwɪloʊ/,veil,tree,0.65,passed,accepted,seed_cleaned
+11,medio,meadow,"grassland, field, where",/ˈmeðjo/,/ˈmɛdoʊ/,half; middle,grassland,0.65,passed,accepted,seed_cleaned
+12,dinero,denier,"unit of measurement, unit, measurement",/diˈneɾo/,/dɪˈnaɪər/,money,unit of fabric fineness,0.6,passed,accepted,seed_cleaned
+13,plata,platter,"flatware, large, shallow",/ˈplata/,/ˈplætər/,silver; money,large serving dish,0.75,passed,accepted,seed_cleaned
+14,playa,player,"contestant, participates, skilled",/ˈplaʝa/,/ˈpleɪər/,beach,person who plays a game,0.65,passed,accepted,seed_cleaned
+15,silla,sealer,"sealing material, sealing, material",/ˈsiʝa/,/ˈsiːlər/,chair,person or device that seals,0.7,passed,accepted,seed_cleaned
+16,olla,oilier,"containing, unusual, amount",/ˈoʝa/,/ˈɔɪliər/,pot,more oily,0.6,passed,accepted,seed_cleaned
+17,abuela,a waller,"builds, walls",/aˈbwela/,/ə ˈwɔːlər/,grandmother,person who builds walls,0.55,passed,accepted,seed_cleaned
+18,hermana,her manna,"food, heaven",/eɾˈmana/,/hɜːr ˈmænə/,sister,her food from heaven,0.55,passed,accepted,seed_cleaned
+19,manzana,man's an' a,"contraction, phrase",/manˈsana/,/mænz ən ə/,apple,contraction-like phrase,0.5,passed,accepted,seed_cleaned
+20,sandía,Sunday,"rest day, day of rest, first",/sanˈdia/,/ˈsʌndeɪ/,watermelon,day of the week,0.6,passed,accepted,seed_cleaned
+21,uva,Uber,"ride, hailing, company",/ˈuβa/,/ˈuːbər/,grape,ride-hailing company,0.7,passed,accepted,seed_cleaned
+22,leche,leash,"restraint, constraint, consisting",/ˈletʃe/,/liːʃ/,milk,strap for controlling an animal,0.7,passed,accepted,seed_cleaned
+23,caballo,cavalry,"military personnel, soldiery, troops",/kaˈβaʝo/,/ˈkævəlri/,horse,soldiers on horseback,0.55,passed,accepted,seed_cleaned
+24,vaca,backer,"patron, sponsor, supporter",/ˈbaka/,/ˈbækər/,cow,supporter; investor,0.7,passed,accepted,seed_cleaned
+25,cerdo,sirdar,"important person, influential person, personage",/ˈseɾðo/,/ˈsɜːrdɑːr/,pig,leader in South Asia,0.55,passed,accepted,seed_cleaned
+26,pollo,Polo,"venetian, traveler, explored",/ˈpoʝo/,/ˈpoʊloʊ/,chicken,game; brand,0.7,passed,accepted,seed_cleaned
+27,ave,avatar,"personification, familiar, idea",/ˈaβe/,/ˈævətɑːr/,bird,embodiment; online identity,0.45,passed,accepted,seed_cleaned
+28,piedra,PDA,"electronic device, lightweight, consumer",/ˈpjeðɾa/,/ˌpiːdiːˈeɪ/,stone,personal digital assistant,0.4,passed,accepted,seed_cleaned
+29,luna,looner,"informal, term, balloon",/ˈluna/,/ˈluːnər/,moon,informal term for balloon enthusiast,0.75,passed,accepted,seed_cleaned
+30,calle,kale,"money, informal, terms",/ˈkaʝe/,/keɪl/,street,leafy vegetable,0.6,passed,accepted,seed_cleaned
+31,suelo,swallow,"taste, mouthful, small",/ˈswelo/,/ˈswɒloʊ/,floor; ground,bird; to swallow,0.55,passed,accepted,seed_cleaned
+32,coche,coach,"trainer, sports, charge",/ˈkotʃe/,/koʊtʃ/,car,bus; trainer,0.75,passed,accepted,seed_cleaned
+33,camión,come-on,"temptation, enticement, anything",/kaˈmjon/,/ˈkʌmɒn/,truck,encouragement phrase,0.55,passed,accepted,seed_cleaned
+34,bici,B.C.,"christian, following, dates",/ˈbiθi/,/ˌbiːˈsiː/,bicycle,before Christ,0.6,passed,accepted,seed_cleaned
+35,taza,taser,"electroshock, weapon",/ˈtasa/,/ˈteɪzər/,cup,electroshock weapon,0.65,passed,accepted,seed_cleaned
+36,cama,comma,"punctuation, punctuation mark, mark",/ˈkama/,/ˈkɒmə/,bed,punctuation mark,0.7,passed,accepted,seed_cleaned
+37,reloj,relay,"passage, handing over, passing",/reˈlox/,/ˈriːleɪ/,clock; watch,to pass on; relay race,0.5,passed,accepted,seed_cleaned
+38,baño,banjo,"stringed instrument, stringed, instrument",/ˈbaɲo/,/ˈbændʒoʊ/,bathroom; bath,stringed instrument,0.6,passed,accepted,seed_cleaned
+39,sala,solar,"relating, derived, utilizing",/ˈsala/,/ˈsoʊlər/,living room,relating to the sun,0.7,passed,accepted,seed_cleaned
+40,sin,scene,"area, country, place",/sin/,/ˈsin/,lessness; sin,the place where some action occurs,1.0,passed,mined_candidate,ipa_dict_mined
+41,pis,peace,"order, prevailing, absence",/pis/,/ˈpis/,liquid excretory product,the state prevailing during the absence of war,1.0,passed,mined_candidate,ipa_dict_mined
+42,puf,poof,"gay man, shirtlifter, offensive",/puf/,/ˈpuf/,a low seat or a stool to rest the feet of a seated person,offensive term for an openly homosexual man,1.0,passed,mined_candidate,ipa_dict_mined
+43,caqui,cocky,"overly, self, confident",/kaki/,/ˈkɑki/,a military uniform made of khaki fabric,overly self-confident or self-assertive,0.872,passed,mined_candidate,ipa_dict_mined
+44,pipí,peppy,"marked, lively, action",/piˈpi/,/ˈpɛpi/,liquid excretory product,marked by lively action,0.865,passed,mined_candidate,ipa_dict_mined
+45,mohín,moan,"utterance, vocalization, expressing",/moˈin/,/ˈmoʊn/,a disdainful grimace,an utterance expressing pain or disapproval,0.859,passed,mined_candidate,ipa_dict_mined
+46,maíz,mouse,"rodent, gnawer, numerous",/maˈis/,/ˈmaʊs/,whiskey distilled from a mash of not less than 80 percent corn,any of numerous small rodents typically resembling diminutive rats having pointed snouts and small ears on elongated bodies with slender usually hairless tails,0.859,passed,mined_candidate,ipa_dict_mined
+47,sean,seine,"french, river, flows",/sean/,/ˈseɪn/,seán,a French river that flows through the heart of Paris and then northward into the English Channel,0.854,passed,mined_candidate,ipa_dict_mined
+48,tupí,tippy,"boats, inclined, heel",/tuˈpi/,/ˈtɪpi/,a member of the South American Indian people living in Brazil and Paraguay,(used of boats) inclined to heel over easily under sail,0.854,passed,mined_candidate,ipa_dict_mined
+49,peón,pain,"symptom, some, physical",/peˈon/,/ˈpeɪn/,(chess) the least powerful piece; moves only forward and captures only to the side; it can be promoted to a more powerful piece if it reaches the 8th rank,a symptom of some physical hurt or disorder,0.854,passed,mined_candidate,ipa_dict_mined
+50,sufí,sooty,"blackest, black, similar",/suˈfi/,/ˈsuti/,of or relating to the Sufis or to Sufism,of the blackest black; similar to the color of jet or coal,0.852,passed,mined_candidate,ipa_dict_mined
+51,time,teams,"unit, social unit, cooperative",/time/,/ˈtimz/,time,a cooperative unit (especially in sports),0.841,passed,mined_candidate,ipa_dict_mined
+52,timo,teams,"unit, social unit, cooperative",/timo/,/ˈtimz/,a ductless glandular organ at the base of the neck that produces lymphocytes and aids in producing immunity; atrophies with age,a cooperative unit (especially in sports),0.831,passed,mined_candidate,ipa_dict_mined
+53,esquí,achy,"causing, dull, steady",/eˈski/,/ˈeɪki/,skiing,causing a dull and steady pain,0.831,passed,mined_candidate,ipa_dict_mined
+54,mina,means,"implementation, effectuation, result",/mina/,/ˈminz/,mixture of graphite with clay in different degrees of hardness; the marking substance in a pencil,how a result is obtained or an end is achieved,0.831,passed,mined_candidate,ipa_dict_mined
+55,dan,don,"gentleman, spanish, nobleman",/dan/,/ˈdɑn/,dan,a Spanish gentleman or nobleman,0.83,passed,mined_candidate,ipa_dict_mined
+56,van,bonn,"city, western, germany",/ban/,/ˈbɑn/,van,a city in western Germany on the Rhine River; was the capital of West Germany between 1949 and 1989,0.83,passed,mined_candidate,ipa_dict_mined
+57,mil,meal,"nutriment, nourishment, nutrition",/mil/,/ˈmiɫ/,a Cypriot monetary unit equal to one thousandth of a pound,the food served and eaten at one time,0.83,passed,mined_candidate,ipa_dict_mined
+58,can,khan,"ruler, swayer, title",/kan/,/ˈkɑn/,a member of the genus Canis (probably descended from the common wolf) that has been domesticated by man since prehistoric times; occurs in many breeds,a title given to rulers or other important people in Asian countries,0.83,passed,mined_candidate,ipa_dict_mined
+59,vez,bass,"pitch, lowest, part",/bes/,/ˈbæs/,an instance or single occasion for some event,the lowest part of the musical range,0.826,passed,mined_candidate,ipa_dict_mined
+60,paz,pass,"accomplishment, achievement, baseball",/pas/,/ˈpæs/,(Roman Catholic Church) a greeting signifying Christian love for those assisting at the Eucharist,(baseball) an advance to first base by a batter who receives four balls,0.826,passed,mined_candidate,ipa_dict_mined
+61,más,mass,"fundamental quantity, fundamental measure, physical property",/ˈmas/,/ˈmæs/,más,the property of a body that causes it to have weight in a gravitational field,0.826,passed,mined_candidate,ipa_dict_mined
+62,don,dawn,"hour, time of day, first",/don/,/ˈdɔn/,sensitivity similar to that of a receptor organ,the first light of day,0.826,passed,mined_candidate,ipa_dict_mined
+63,puta,pooch,"dog, domestic dog, canis familiaris",/puta/,/ˈputʃ/,a prostitute who attracts customers by walking the streets,informal terms for dogs,0.826,passed,mined_candidate,ipa_dict_mined
+64,mes,mass,"fundamental quantity, fundamental measure, physical property",/mes/,/ˈmæs/,the monthly discharge of blood from the uterus of nonpregnant women from puberty to menopause; ; --Hippocrates; --Aristotle,the property of a body that causes it to have weight in a gravitational field,0.826,passed,mined_candidate,ipa_dict_mined
+65,puto,pooch,"dog, domestic dog, canis familiaris",/puto/,/ˈputʃ/,offensive term for an openly homosexual man,informal terms for dogs,0.826,passed,mined_candidate,ipa_dict_mined
+66,sus,zeus,"greek, mythology, supreme",/sus/,/ˈzus/,type genus of the Suidae,(Greek mythology) the supreme god of ancient Greek mythology; son of Rhea and Cronus whom he dethroned; husband and brother of Hera; brother of Poseidon and Hades; father of many gods; counterpart of Roman Jupiter,0.826,passed,mined_candidate,ipa_dict_mined
+67,des,das,"placental, placental mammal, eutherian",/des/,/ˈdæs/,des,any of several small ungulate mammals of Africa and Asia with rodent-like incisors and feet with hooflike toes,0.826,passed,mined_candidate,ipa_dict_mined
+68,común,cameroon,"inactive, volcano, western",/koˈmun/,/ˈkæmɝˌun/,having no special distinction or quality; widely known or commonly encountered; average or ordinary or usual,an inactive volcano in western Cameroon; highest peak on the West African coast,0.821,passed,mined_candidate,ipa_dict_mined
+69,bey,bay,"body of water, water, indentation",/bej/,/ˈbeɪ/,the governor of a district or province in the Ottoman Empire,an indentation of a shoreline larger than a cove but smaller than a gulf,0.819,passed,mined_candidate,ipa_dict_mined
+70,fin,fen,"chinese monetary unit, equal, yuan",/fin/,/ˈfɛn/,termination of operations,100 fen equal 1 yuan in China,0.819,passed,mined_candidate,ipa_dict_mined
+71,tía,tia,"ischemia, ischaemia, brief",/ˈtia/,/ˈtiə/,the sister of your father or mother; the wife of your uncle,brief episode in which the brain gets insufficient blood supply; symptoms depend on the site of the blockage,0.819,passed,mined_candidate,ipa_dict_mined
+72,bus,boot,"footwear, footgear, covers",/bus/,/ˈbut/,an electrical conductor that makes a common connection between several circuits,footwear that covers the whole foot and lower leg,0.819,passed,mined_candidate,ipa_dict_mined
+73,faz,fuss,"agitation, excited",/fas/,/ˈfəs/,an extended outer surface of an object,an excited state of agitation,0.819,passed,mined_candidate,ipa_dict_mined
+74,tío,tia,"ischemia, ischaemia, brief",/ˈtio/,/ˈtiə/,a boy or man,brief episode in which the brain gets insufficient blood supply; symptoms depend on the site of the blockage,0.819,passed,mined_candidate,ipa_dict_mined
+75,den,din,"noise, loud, harsh",/den/,/ˈdɪn/,den,a loud harsh or strident noise,0.819,passed,mined_candidate,ipa_dict_mined
+76,son,sun,"star, source, light",/son/,/ˈsən/,the act of singing,the star that is the source of light and heat for the planets in the solar system,0.819,passed,mined_candidate,ipa_dict_mined
+77,san,son,"male offspring, man-child, male",/san/,/ˈsən/,san,a male human offspring,0.819,passed,mined_candidate,ipa_dict_mined
+78,tan,ton,"avoirdupois unit, united, states",/tan/,/ˈtən/,to a very great extent or degree,a United States unit of weight equivalent to 2000 pounds,0.819,passed,mined_candidate,ipa_dict_mined
+79,mus,moot,"lawsuit, suit, case",/mus/,/ˈmut/,any of numerous small rodents typically resembling diminutive rats having pointed snouts and small ears on elongated bodies with slender usually hairless tails,a hypothetical case that law students argue as an exercise,0.819,passed,mined_candidate,ipa_dict_mined
+80,vid,bede,"roman, catholic, church",/bið/,/ˈbid/,any of numerous woody vines of genus Vitis bearing clusters of edible berries,(Roman Catholic Church) English monk and scholar (672-735),0.819,passed,mined_candidate,ipa_dict_mined
+81,dos,duce,leader,/dos/,/ˈdus/,an operating system that is on a disk,leader,0.819,passed,mined_candidate,ipa_dict_mined
+82,voz,bus,"public transport, vehicle, carrying",/bos/,/ˈbəs/,the distinctive quality or pitch or condition of a person's speech,a vehicle carrying many passengers; used for public transport,0.819,passed,mined_candidate,ipa_dict_mined
+83,pus,poof,"gay man, shirtlifter, offensive",/pus/,/ˈpuf/,a fluid product of inflammation,offensive term for an openly homosexual man,0.816,passed,mined_candidate,ipa_dict_mined
+84,sexto,sixty,"large integer, cardinal, number",/seksto/,/ˈsɪksti/,coming next after the fifth and just before the seventh in position,the cardinal number that is the product of ten and six,0.816,passed,mined_candidate,ipa_dict_mined
+85,das,des,"estrogen, oestrogen, potent",/das/,/ˈdɛs/,das,a potent estrogen used in medicine and in feed for livestock and poultry,0.812,passed,mined_candidate,ipa_dict_mined
+86,dúo,dewy,dewy,/ˈduo/,/ˈdui/,a musical composition for two performers,wet with dew,0.812,passed,mined_candidate,ipa_dict_mined
+87,ice,esau,"testament, eldest, isaac",/ise/,/ˈiˌsɔ/,ice,(Old Testament) the eldest son of Isaac who would have inherited the covenant that God made with Abraham and that Abraham passed on to Isaac; he traded his birthright to his twin brother Jacob for a mess of pottage,0.812,passed,mined_candidate,ipa_dict_mined
+88,huir,weir,"dam, dike, dyke",/wiɾ/,/ˈwiɹ/,avoid and stay away from deliberately; stay clear of,a low dam built across a stream to raise its level or divert its flow,0.809,passed,mined_candidate,ipa_dict_mined
+89,sur,sous,"coin, former, french",/suɾ/,/ˈsuz/,any region lying in or toward the south,a former French coin of low denomination; often used of any small amount of money,0.809,passed,mined_candidate,ipa_dict_mined
+90,bicho,beach,"geological formation, formation, area",/bitʃo/,/ˈbitʃ/,any of various small animals or insects that are pests; e.g. cockroaches or rats,an area of sand sloping down to the water of a sea or lake,0.808,passed,mined_candidate,ipa_dict_mined
+91,chica,cheek,"feature, lineament, either",/tʃika/,/ˈtʃik/,a youthful female person,either side of the face below the eyes,0.808,passed,mined_candidate,ipa_dict_mined
+92,chico,cheek,"feature, lineament, either",/tʃiko/,/ˈtʃik/,very small,either side of the face below the eyes,0.808,passed,mined_candidate,ipa_dict_mined
+93,sutil,sooty,"blackest, black, similar",/sutil/,/ˈsuti/,working or spreading in a hidden and usually injurious way,of the blackest black; similar to the color of jet or coal,0.806,passed,mined_candidate,ipa_dict_mined
+94,pie,pew,"bench, long, backs",/pje/,/ˈpju/,the pedal extremity of vertebrates other than human beings,long bench with backs; used in church by the congregation,0.806,passed,mined_candidate,ipa_dict_mined
+95,feo,fay,"spiritual being, supernatural being, small",/feo/,/ˈfeɪ/,lacking in physical beauty or proportion,"a small being, human in form, playful and having magical powers",0.806,passed,mined_candidate,ipa_dict_mined
+96,sea,say,"opportunity, chance, speak",/sea/,/ˈseɪ/,sea,the chance to speak,0.806,passed,mined_candidate,ipa_dict_mined
+97,tao,thai,"asian, asiatic, native",/tao/,/ˈtaɪ/,the ultimate principle of the universe,a native or inhabitant of Thailand,0.806,passed,mined_candidate,ipa_dict_mined
+98,túnica,tunisia,"republic, northwestern, africa",/ˈtunika/,/ˌtuˈniʒə/,any of a variety of loose fitting cloaks extending to the hips or knees,a republic in northwestern Africa on the Mediterranean coast; achieved independence from France in 1956,0.804,passed,mined_candidate,ipa_dict_mined
+99,dígito,ddt,"pollutant, insecticide, insect powder",/ˈdixito/,/ˌdiˌdiˈti/,one of the elements that collectively form a system of numeration,an insecticide that is also toxic to animals and humans; banned in the United States since 1972,0.8,passed,mined_candidate,ipa_dict_mined
+100,disnea,dna,"polymer, biochemistry, long",/diznea/,/ˈdiˌɛˈneɪ/,difficult or labored respiration,(biochemistry) a long linear polymer found in the nucleus of a cell and formed from nucleotides and shaped like a double helix; associated with the transmission of genetic information,0.797,passed,mined_candidate,ipa_dict_mined
+101,ver,bay,"body of water, water, indentation",/beɾ/,/ˈbeɪ/,"get to know or become aware of, usually accidentally",an indentation of a shoreline larger than a cove but smaller than a gulf,0.792,passed,mined_candidate,ipa_dict_mined
+102,par,pie,"pastry, dish, baked",/paɾ/,/ˈpaɪ/,divisible by two,dish baked in pastry-lined pan often with a pastry top,0.792,passed,mined_candidate,ipa_dict_mined
+103,bar,buy,"purchase, advantageous",/baɾ/,/ˈbaɪ/,a room or establishment where alcoholic drinks are served over a counter,an advantageous purchase,0.792,passed,mined_candidate,ipa_dict_mined
+104,ser,say,"opportunity, chance, speak",/seɾ/,/ˈseɪ/,a living (or once living) entity,the chance to speak,0.792,passed,mined_candidate,ipa_dict_mined
+105,dar,die,"cube, square block, small",/daɾ/,/ˈdaɪ/,proffer (a body part),a small cube with 1 to 6 spots on the six faces; used in gambling to generate random numbers,0.792,passed,mined_candidate,ipa_dict_mined
+106,muy,move,"decision, determination, conclusion",/muj/,/ˈmuv/,to a great extent or degree,the act of deciding to do something,0.792,passed,mined_candidate,ipa_dict_mined
+107,sal,psi,"pressure unit, unit, pressure",/sal/,/ˈsaɪ/,white crystalline form of especially sodium chloride used to season and preserve food,a unit of pressure,0.788,passed,mined_candidate,ipa_dict_mined
+108,sed,say,"opportunity, chance, speak",/seð/,/ˈseɪ/,strong desire for something (not food or drink),the chance to speak,0.788,passed,mined_candidate,ipa_dict_mined
+109,cal,chi,"energy, vim, vitality",/kal/,/ˈkaɪ/,a white crystalline oxide used in the production of calcium hydroxide,the circulating life energy that in Chinese philosophy is thought to be inherent in all things; in traditional Chinese medicine the balance of negative and positive forms in the body is believed to be essential for good health,0.788,passed,mined_candidate,ipa_dict_mined
+110,maine,myna,"starling, tropical, asian",/maine/,/ˈmaɪnə/,maine,tropical Asian starlings,0.787,passed,mined_candidate,ipa_dict_mined
+111,tenaz,tennis,"court game, game, played",/tenas/,/ˈtɛnəs/,sticking together,a game played with rackets by two or four players who hit a ball back and forth over a net that divides the court,0.787,passed,mined_candidate,ipa_dict_mined
+112,mantón,mountain,"natural elevation, elevation, land",/manˈton/,/ˈmaʊntən/,a loose outer garment,a land mass that projects well above its surroundings; higher than a hill,0.786,passed,mined_candidate,ipa_dict_mined
+113,manta,monte,"card game, cards, gambling",/manta/,/ˈmɑnti/,extremely large pelagic tropical ray that feeds on plankton and small fishes; usually harmless but its size make it dangerous if harpooned,a gambling card game of Spanish origin; 3 or 4 cards are dealt face up and players bet that one of them will be matched before the others as the cards are dealt from the pack one at a time,0.785,passed,mined_candidate,ipa_dict_mined
+114,manto,monte,"card game, cards, gambling",/manto/,/ˈmɑnti/,a loose outer garment,a gambling card game of Spanish origin; 3 or 4 cards are dealt face up and players bet that one of them will be matched before the others as the cards are dealt from the pack one at a time,0.785,passed,mined_candidate,ipa_dict_mined
+115,picar,pecan,"wood, tree",/pikaɾ/,/ˈpiˌkɑn/,reduce to small pieces or particles by pounding or abrading,wood of a pecan tree,0.783,passed,mined_candidate,ipa_dict_mined
+116,senda,sandy,"hair, color, pale",/senda/,/ˈsændi/,a course of conduct,of hair color; pale yellowish to yellowish brown,0.783,passed,mined_candidate,ipa_dict_mined
+117,parís,police,"law enforcement agency, force, personnel",/paˈɾis/,/pəˈɫis/,(Greek mythology) the prince of Troy who abducted Helen from her husband Menelaus and provoked the Trojan War,the force of policemen and officers,0.783,passed,mined_candidate,ipa_dict_mined
+118,pesca,pesky,"causing, irritation, annoyance",/peska/,/ˈpɛski/,the act of someone who fishes as a diversion,causing irritation or annoyance,0.783,passed,mined_candidate,ipa_dict_mined
+119,botín,bhutan,"landlocked, principality, himalayas",/boˈtin/,/ˌbuˈtæn/,a cloth covering (a legging) that covers the instep and ankles,a landlocked principality in the Himalayas to the northeast of India,0.783,passed,mined_candidate,ipa_dict_mined
+120,vía,bier,"coffin, casket, along",/ˈbia/,/ˈbiɹ/,a course of conduct,a coffin along with its stand,0.781,passed,mined_candidate,ipa_dict_mined
+121,tomás,thomas,"united, states, clockmaker",/toˈmas/,/ˈtɑməs/,tomas; tomás,United States clockmaker who introduced mass production (1785-1859),0.781,passed,mined_candidate,ipa_dict_mined
+122,púa,poor,"people, possessions, wealth",/ˈpua/,/ˈpuɹ/,the pointed part of barbed wire,people without possessions or wealth (considered as a group),0.781,passed,mined_candidate,ipa_dict_mined
+123,botón,bhutan,"landlocked, principality, himalayas",/boˈton/,/ˌbuˈtæn/,a round fastener sewn to shirts and coats etc to fit through buttonholes,a landlocked principality in the Himalayas to the northeast of India,0.779,passed,mined_candidate,ipa_dict_mined
+124,manco,monkey,"primate, various, long",/maŋko/,/ˈməŋki/,without a hand or hands,any of various long-tailed primates (excluding the prosimians),0.779,passed,mined_candidate,ipa_dict_mined
+125,pizca,pesky,"causing, irritation, annoyance",/piska/,/ˈpɛski/,a small fragment of something broken off from the whole,causing irritation or annoyance,0.779,passed,mined_candidate,ipa_dict_mined
+126,manes,minas,"starling, tropical, asian",/manes/,/ˈminəs/,a Persian prophet who founded Manichaeism (216-276),tropical Asian starlings,0.779,passed,mined_candidate,ipa_dict_mined
+127,budín,bhutan,"landlocked, principality, himalayas",/buˈðin/,/ˌbuˈtæn/,(British) the dessert course of a meal (`pud' is used informally),a landlocked principality in the Himalayas to the northeast of India,0.779,passed,mined_candidate,ipa_dict_mined
+128,satén,seton,"united, states, religious",/saˈten/,/ˈsitən/,a cotton fabric with a satiny finish,United States religious leader who was the first person born in the United States to be canonized (1774-1821),0.779,passed,mined_candidate,ipa_dict_mined
+129,miles,minas,"starling, tropical, asian",/miles/,/ˈminəs/,miles,tropical Asian starlings,0.779,passed,mined_candidate,ipa_dict_mined
+130,por,poe,"united, states, writer",/poɾ/,/ˈpoʊ/,so as to pass a given point,United States writer and poet (1809-1849),0.778,passed,mined_candidate,ipa_dict_mined
