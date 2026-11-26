@@ -227,3 +227,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Environment & Secrets
+.env
+.venv/
+
+# Heavy raw datasets & IPA dictionaries
+01_raw_data/
+02_ipa_dicts/
+data/01_raw_data/
+data/02_ipa_dicts/
