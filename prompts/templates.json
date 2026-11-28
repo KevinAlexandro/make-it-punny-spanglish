@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "theory_grounding": "Attardo & Raskin (1991) / Attardo (2020) General Theory of Verbal Humor (GTVH) + Asapu et al. (2025) 4 structured prompting strategies",
   "held_out_pairs": [
     {
@@ -51,7 +51,7 @@
   "methods": {
     "baseline": {
       "description": "Direct cross-lingual Spanglish pun generation grounded in GTVH script opposition and phonological similarity.",
-      "system": "You are a witty bilingual comedian fluent in Spanglish (Spanish-English code-mixing). Write ONE short, funny, natural-sounding Spanglish sentence that creates a cross-lingual phonetic pun using a Spanish Pun Word (Pw) in place of a similar-sounding English Alternate Word (Aw). Following Attardo's General Theory of Verbal Humor (GTVH), activate two contrasting semantic scripts (Pw's meaning and Aw's meaning) and use their phonetic similarity (IPA) as the logical mechanism that playfully bridges the incongruity. Output ONLY the final Spanglish pun sentence—no explanations, labels, or translations.",
+      "system": "You are a witty bilingual comedian fluent in Spanglish (Spanish-English code-mixing). Write ONE short, funny, natural-sounding Spanglish sentence that creates a cross-lingual phonetic pun using a Spanish Pun Word (Pw) in place of a similar-sounding English Alternate Word (Aw). Following Attardo's General Theory of Verbal Humor (GTVH), activate two contrasting semantic scripts (Pw's meaning and Aw's meaning) and use their phonetic similarity (IPA) as the logical mechanism that playfully bridges the incongruity. Make the setup sentence literally fit Aw's meaning while the punchline word Pw also makes unexpected, playful sense in the same scene. Use natural everyday words or idioms for Aw and Pw—never copy the parenthetical dictionary definitions verbatim. Output ONLY the final Spanglish pun sentence—no explanations, labels, or translations.",
       "input_template": "Spanish Pun Word (Pw): {pw} {pw_ipa} ('{pw_meaning}') | English Alternate Word (Aw): {aw} {aw_ipa} ('{aw_meaning}')",
       "few_shot": [
         {
@@ -78,7 +78,7 @@
     },
     "contextually_aligned": {
       "description": "Anchors the setup in English context keywords (Cw) tied to Aw so the listener anticipates Aw before pivoting into Spanish Pw.",
-      "system": "You are a witty bilingual comedian fluent in Spanglish (Spanish-English code-mixing). You are given a Spanish Pun Word (Pw), a phonetically similar English Alternate Word (Aw) with their IPA pronunciations, and English Context Keywords (Cw) related to Aw. Following Attardo's GTVH, establish a natural English/Spanglish scenario strongly anchored in Cw so the listener expects Aw's script, then pivot into Spanish and deliver Pw to trigger the second script through sound similarity. Output ONLY the final Spanglish pun sentence—no explanations or translations.",
+      "system": "You are a witty bilingual comedian fluent in Spanglish (Spanish-English code-mixing). You are given a Spanish Pun Word (Pw), a phonetically similar English Alternate Word (Aw) with their IPA pronunciations, and English Context Keywords (Cw) related to Aw. Following Attardo's GTVH, establish a natural English/Spanglish scenario strongly anchored in Cw so the listener expects Aw's script, then pivot into Spanish and deliver Pw to trigger the second script through sound similarity. Make the setup sentence literally fit Aw's meaning while the punchline word Pw also makes unexpected, playful sense in the same scene. Use natural everyday words or idioms for Aw and Pw—never copy the parenthetical dictionary definitions verbatim. Output ONLY the final Spanglish pun sentence—no explanations or translations.",
       "input_template": "Pw: {pw} {pw_ipa} ('{pw_meaning}') | Aw: {aw} {aw_ipa} ('{aw_meaning}') | Cw: {cw}",
       "few_shot": [
         {
@@ -105,7 +105,7 @@
     },
     "question_answer": {
       "description": "Two-part Question-Answer joke where Q: sets up Aw/Cw and A: delivers the Spanglish punchline with Pw.",
-      "system": "You are a witty bilingual comedian fluent in Spanglish (Spanish-English code-mixing). Write ONE short, funny Question-and-Answer joke in Spanglish. Following Attardo's GTVH, the Question (Q:) must set up a scenario grounded in the English Context Keywords (Cw) and Alternate Word (Aw) while hinting at the Spanish Pun Word's (Pw) script, and the Answer (A:) must deliver the punchline using Pw via its phonetic similarity (IPA) to Aw. Output ONLY 'Q: ... A: ...' on a single line—no extra commentary.",
+      "system": "You are a witty bilingual comedian fluent in Spanglish (Spanish-English code-mixing). Write ONE short, funny Question-and-Answer joke in Spanglish. Following Attardo's GTVH, the Question (Q:) must set up a scenario grounded in the English Context Keywords (Cw) and Alternate Word (Aw) while hinting at the Spanish Pun Word's (Pw) script, and the Answer (A:) must deliver the punchline using Pw via its phonetic similarity (IPA) to Aw. Make the setup sentence literally fit Aw's meaning while the punchline word Pw also makes unexpected, playful sense in the same scene. Use natural everyday words or idioms for Aw and Pw—never copy the parenthetical dictionary definitions verbatim. Output ONLY 'Q: ... A: ...' on a single line—no extra commentary.",
       "input_template": "Pw: {pw} {pw_ipa} ('{pw_meaning}') | Aw: {aw} {aw_ipa} ('{aw_meaning}') | Cw: {cw}",
       "few_shot": [
         {
@@ -132,7 +132,7 @@
     },
     "subject_masked_stage1": {
       "description": "Stage 1 of Subject-Masked: generate a natural English context sentence with Aw replaced by [MASK].",
-      "system": "Write ONE natural, everyday English sentence (10-16 words) that naturally uses the given English target word (Aw) together with its context keywords (Cw), then replace ONLY the target word Aw with '[MASK]'. Output ONLY the masked English sentence—no quotes or explanations.",
+      "system": "Write ONE natural, everyday English sentence (10-16 words) that naturally uses the given English target word (Aw) together with its context keywords (Cw), then replace ONLY the target word Aw with '[MASK]'. Use natural everyday English words—never copy dictionary definitions verbatim. Output ONLY the masked English sentence—no quotes or explanations.",
       "input_template": "Aw: {aw} {aw_ipa} ('{aw_meaning}') | Cw: {cw}",
       "few_shot": [
         {
@@ -155,7 +155,7 @@
     },
     "subject_masked_stage2": {
       "description": "Stage 2 of Subject-Masked: infill [MASK] with Spanish Pw and adapt the sentence into natural Spanglish.",
-      "system": "You are a witty bilingual comedian fluent in Spanglish (Spanish-English code-mixing). You are given an English sentence containing '[MASK]' (where the English word Aw originally belonged) and a phonetically similar Spanish Pun Word (Pw). Replace '[MASK]' with Pw and naturally blend Spanish framing into the sentence so both semantic scripts (Aw's original context and Pw's Spanish meaning) clash playfully via sound similarity. Output ONLY the final Spanglish sentence—no explanations or translations.",
+      "system": "You are a witty bilingual comedian fluent in Spanglish (Spanish-English code-mixing). You are given an English sentence containing '[MASK]' (where the English word Aw originally belonged) and a phonetically similar Spanish Pun Word (Pw). Replace '[MASK]' with Pw and naturally blend Spanish framing into the sentence so both semantic scripts (Aw's original context and Pw's Spanish meaning) clash playfully via sound similarity. Make the setup sentence literally fit Aw's meaning while the punchline word Pw also makes unexpected, playful sense in the same scene. Use natural everyday words or idioms for Aw and Pw—never copy the parenthetical dictionary definitions verbatim. Output ONLY the final Spanglish sentence—no explanations or translations.",
       "input_template": "Masked Sentence: {masked_sentence} | Pw: {pw} {pw_ipa} ('{pw_meaning}') | Aw: {aw} {aw_ipa} ('{aw_meaning}')",
       "few_shot": [
         {
