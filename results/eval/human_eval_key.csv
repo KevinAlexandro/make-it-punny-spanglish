@@ -1,0 +1,101 @@
+eval_id,pair_id,method,spanish_word,english_word,context_word,model,prompt_version,contains_pw
+E001,52,contextually_aligned,timo,teams,"unit, social unit, cooperative",gemini-3.5-flash-lite,1.1,True
+E002,96,subject_masked,sea,say,"opportunity, chance, speak",gemini-3.5-flash-lite,1.1,True
+E003,21,contextually_aligned,uva,Uber,"ride, hailing, company",gemini-3.5-flash-lite,1.1,True
+E004,48,baseline,tupí,tippy,"boats, inclined, heel",gemini-3.5-flash-lite,1.1,True
+E005,55,contextually_aligned,dan,don,"gentleman, spanish, nobleman",gemini-3.5-flash-lite,1.1,True
+E006,43,baseline,caqui,cocky,"overly, self, confident",gemini-3.5-flash-lite,1.1,True
+E007,2,question_answer,flor,floor,"horizontal surface, level, inside",gemini-3.5-flash-lite,1.1,True
+E008,91,subject_masked,chica,cheek,"feature, lineament, either",gemini-3.5-flash-lite,1.1,True
+E009,22,subject_masked,leche,leash,"restraint, constraint, consisting",gemini-3.5-flash-lite,1.1,True
+E010,56,contextually_aligned,van,bonn,"city, western, germany",gemini-3.5-flash-lite,1.1,True
+E011,7,subject_masked,pan,pun,"fun, play, sport",gemini-3.5-flash-lite,1.1,True
+E012,26,contextually_aligned,pollo,Polo,"venetian, traveler, explored",gemini-3.5-flash-lite,1.1,True
+E013,63,question_answer,puta,pooch,"dog, domestic dog, canis familiaris",gemini-3.5-flash-lite,1.1,True
+E014,77,contextually_aligned,san,son,"male offspring, man-child, male",gemini-3.5-flash-lite,1.1,True
+E015,68,baseline,común,cameroon,"inactive, volcano, western",gemini-3.5-flash-lite,1.1,True
+E016,55,question_answer,dan,don,"gentleman, spanish, nobleman",gemini-3.5-flash-lite,1.1,True
+E017,2,subject_masked,flor,floor,"horizontal surface, level, inside",gemini-3.5-flash-lite,1.1,True
+E018,63,subject_masked,puta,pooch,"dog, domestic dog, canis familiaris",gemini-3.5-flash-lite,1.1,True
+E019,18,subject_masked,hermana,her manna,"food, heaven",gemini-3.5-flash-lite,1.1,True
+E020,43,question_answer,caqui,cocky,"overly, self, confident",gemini-3.5-flash-lite,1.1,True
+E021,99,question_answer,dígito,ddt,"pollutant, insecticide, insect powder",gemini-3.5-flash-lite,1.1,True
+E022,22,question_answer,leche,leash,"restraint, constraint, consisting",gemini-3.5-flash-lite,1.1,True
+E023,83,question_answer,pus,poof,"gay man, shirtlifter, offensive",gemini-3.5-flash-lite,1.1,True
+E024,48,subject_masked,tupí,tippy,"boats, inclined, heel",gemini-3.5-flash-lite,1.1,True
+E025,81,baseline,dos,duce,leader,gemini-3.5-flash-lite,1.1,True
+E026,77,baseline,san,son,"male offspring, man-child, male",gemini-3.5-flash-lite,1.1,True
+E027,5,subject_masked,sol,soul,"spirit, immaterial, part",gemini-3.5-flash-lite,1.1,True
+E028,22,contextually_aligned,leche,leash,"restraint, constraint, consisting",gemini-3.5-flash-lite,1.1,True
+E029,77,question_answer,san,son,"male offspring, man-child, male",gemini-3.5-flash-lite,1.1,True
+E030,48,question_answer,tupí,tippy,"boats, inclined, heel",gemini-3.5-flash-lite,1.1,True
+E031,21,question_answer,uva,Uber,"ride, hailing, company",gemini-3.5-flash-lite,1.1,True
+E032,96,question_answer,sea,say,"opportunity, chance, speak",gemini-3.5-flash-lite,1.1,True
+E033,2,baseline,flor,floor,"horizontal surface, level, inside",gemini-3.5-flash-lite,1.1,True
+E034,99,contextually_aligned,dígito,ddt,"pollutant, insecticide, insect powder",gemini-3.5-flash-lite,1.1,True
+E035,18,question_answer,hermana,her manna,"food, heaven",gemini-3.5-flash-lite,1.1,True
+E036,3,subject_masked,burro,burrow,"hole, hollow, animal",gemini-3.5-flash-lite,1.1,True
+E037,81,subject_masked,dos,duce,leader,gemini-3.5-flash-lite,1.1,True
+E038,99,baseline,dígito,ddt,"pollutant, insecticide, insect powder",gemini-3.5-flash-lite,1.1,True
+E039,68,question_answer,común,cameroon,"inactive, volcano, western",gemini-3.5-flash-lite,1.1,True
+E040,55,subject_masked,dan,don,"gentleman, spanish, nobleman",gemini-3.5-flash-lite,1.1,True
+E041,2,contextually_aligned,flor,floor,"horizontal surface, level, inside",gemini-3.5-flash-lite,1.1,True
+E042,81,question_answer,dos,duce,leader,gemini-3.5-flash-lite,1.1,True
+E043,5,baseline,sol,soul,"spirit, immaterial, part",gemini-3.5-flash-lite,1.1,True
+E044,51,contextually_aligned,time,teams,"unit, social unit, cooperative",gemini-3.5-flash-lite,1.1,True
+E045,65,subject_masked,puto,pooch,"dog, domestic dog, canis familiaris",gemini-3.5-flash-lite,1.1,True
+E046,48,contextually_aligned,tupí,tippy,"boats, inclined, heel",gemini-3.5-flash-lite,1.1,True
+E047,3,baseline,burro,burrow,"hole, hollow, animal",gemini-3.5-flash-lite,1.1,True
+E048,51,question_answer,time,teams,"unit, social unit, cooperative",gemini-3.5-flash-lite,1.1,True
+E049,56,question_answer,van,bonn,"city, western, germany",gemini-3.5-flash-lite,1.1,True
+E050,26,question_answer,pollo,Polo,"venetian, traveler, explored",gemini-3.5-flash-lite,1.1,True
+E051,41,baseline,pis,peace,"order, prevailing, absence",gemini-3.5-flash-lite,1.1,True
+E052,91,question_answer,chica,cheek,"feature, lineament, either",gemini-3.5-flash-lite,1.1,False
+E053,26,subject_masked,pollo,Polo,"venetian, traveler, explored",gemini-3.5-flash-lite,1.1,True
+E054,65,baseline,puto,pooch,"dog, domestic dog, canis familiaris",gemini-3.5-flash-lite,1.1,True
+E055,51,baseline,time,teams,"unit, social unit, cooperative",gemini-3.5-flash-lite,1.1,True
+E056,83,baseline,pus,poof,"gay man, shirtlifter, offensive",gemini-3.5-flash-lite,1.1,True
+E057,43,contextually_aligned,caqui,cocky,"overly, self, confident",gemini-3.5-flash-lite,1.1,True
+E058,83,subject_masked,pus,poof,"gay man, shirtlifter, offensive",gemini-3.5-flash-lite,1.1,True
+E059,5,question_answer,sol,soul,"spirit, immaterial, part",gemini-3.5-flash-lite,1.1,True
+E060,41,subject_masked,pis,peace,"order, prevailing, absence",gemini-3.5-flash-lite,1.1,True
+E061,47,question_answer,sean,seine,"french, river, flows",gemini-3.5-flash-lite,1.1,True
+E062,96,baseline,sea,say,"opportunity, chance, speak",gemini-3.5-flash-lite,1.1,True
+E063,83,contextually_aligned,pus,poof,"gay man, shirtlifter, offensive",gemini-3.5-flash-lite,1.1,True
+E064,65,contextually_aligned,puto,pooch,"dog, domestic dog, canis familiaris",gemini-3.5-flash-lite,1.1,True
+E065,63,contextually_aligned,puta,pooch,"dog, domestic dog, canis familiaris",gemini-3.5-flash-lite,1.1,True
+E066,18,contextually_aligned,hermana,her manna,"food, heaven",gemini-3.5-flash-lite,1.1,True
+E067,52,baseline,timo,teams,"unit, social unit, cooperative",gemini-3.5-flash-lite,1.1,True
+E068,21,baseline,uva,Uber,"ride, hailing, company",gemini-3.5-flash-lite,1.1,True
+E069,7,question_answer,pan,pun,"fun, play, sport",gemini-3.5-flash-lite,1.1,True
+E070,81,contextually_aligned,dos,duce,leader,gemini-3.5-flash-lite,1.1,True
+E071,52,question_answer,timo,teams,"unit, social unit, cooperative",gemini-3.5-flash-lite,1.1,True
+E072,56,baseline,van,bonn,"city, western, germany",gemini-3.5-flash-lite,1.1,True
+E073,47,subject_masked,sean,seine,"french, river, flows",gemini-3.5-flash-lite,1.1,True
+E074,91,baseline,chica,cheek,"feature, lineament, either",gemini-3.5-flash-lite,1.1,True
+E075,3,question_answer,burro,burrow,"hole, hollow, animal",gemini-3.5-flash-lite,1.1,True
+E076,5,contextually_aligned,sol,soul,"spirit, immaterial, part",gemini-3.5-flash-lite,1.1,True
+E077,68,contextually_aligned,común,cameroon,"inactive, volcano, western",gemini-3.5-flash-lite,1.1,True
+E078,7,baseline,pan,pun,"fun, play, sport",gemini-3.5-flash-lite,1.1,True
+E079,7,contextually_aligned,pan,pun,"fun, play, sport",gemini-3.5-flash-lite,1.1,True
+E080,47,baseline,sean,seine,"french, river, flows",gemini-3.5-flash-lite,1.1,True
+E081,55,baseline,dan,don,"gentleman, spanish, nobleman",gemini-3.5-flash-lite,1.1,True
+E082,52,subject_masked,timo,teams,"unit, social unit, cooperative",gemini-3.5-flash-lite,1.1,True
+E083,47,contextually_aligned,sean,seine,"french, river, flows",gemini-3.5-flash-lite,1.1,True
+E084,77,subject_masked,san,son,"male offspring, man-child, male",gemini-3.5-flash-lite,1.1,True
+E085,21,subject_masked,uva,Uber,"ride, hailing, company",gemini-3.5-flash-lite,1.1,True
+E086,43,subject_masked,caqui,cocky,"overly, self, confident",gemini-3.5-flash-lite,1.1,True
+E087,18,baseline,hermana,her manna,"food, heaven",gemini-3.5-flash-lite,1.1,True
+E088,51,subject_masked,time,teams,"unit, social unit, cooperative",gemini-3.5-flash-lite,1.1,True
+E089,41,question_answer,pis,peace,"order, prevailing, absence",gemini-3.5-flash-lite,1.1,True
+E090,65,question_answer,puto,pooch,"dog, domestic dog, canis familiaris",gemini-3.5-flash-lite,1.1,True
+E091,26,baseline,pollo,Polo,"venetian, traveler, explored",gemini-3.5-flash-lite,1.1,True
+E092,22,baseline,leche,leash,"restraint, constraint, consisting",gemini-3.5-flash-lite,1.1,True
+E093,68,subject_masked,común,cameroon,"inactive, volcano, western",gemini-3.5-flash-lite,1.1,True
+E094,99,subject_masked,dígito,ddt,"pollutant, insecticide, insect powder",gemini-3.5-flash-lite,1.1,True
+E095,3,contextually_aligned,burro,burrow,"hole, hollow, animal",gemini-3.5-flash-lite,1.1,True
+E096,63,baseline,puta,pooch,"dog, domestic dog, canis familiaris",gemini-3.5-flash-lite,1.1,True
+E097,41,contextually_aligned,pis,peace,"order, prevailing, absence",gemini-3.5-flash-lite,1.1,True
+E098,91,contextually_aligned,chica,cheek,"feature, lineament, either",gemini-3.5-flash-lite,1.1,True
+E099,96,contextually_aligned,sea,say,"opportunity, chance, speak",gemini-3.5-flash-lite,1.1,True
+E100,56,subject_masked,van,bonn,"city, western, germany",gemini-3.5-flash-lite,1.1,True

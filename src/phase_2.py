@@ -13,10 +13,14 @@ from pathlib import Path
 from typing import Any
 
 import pandas as pd
-from spanglish_pun_generator import VALID_METHODS, SpanglishPunGenerator
+
+try:
+    from spanglish_pun_generator import VALID_METHODS, SpanglishPunGenerator
+except ImportError:
+    from src.spanglish_pun_generator import VALID_METHODS, SpanglishPunGenerator
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_INPUT_CSV = PROJECT_ROOT / "data" / "sample_spanish_english_pun_pairs.csv"
+DEFAULT_INPUT_CSV = PROJECT_ROOT / "data" / "spanglish_pun_pairs_130_clean.csv"
 DEFAULT_PROMPTS_JSON = PROJECT_ROOT / "prompts" / "templates.json"
 
 REQUIRED_TEMPLATE_KEYS = (
@@ -26,8 +30,6 @@ REQUIRED_TEMPLATE_KEYS = (
     "subject_masked_stage1",
     "subject_masked_stage2",
 )
-
-NON_WORD_PATTERN = r"proper name|informal name-like|phrase-like form"
 
 
 def load_prompt_templates(json_path: str | Path = DEFAULT_PROMPTS_JSON) -> dict[str, Any]:
@@ -49,11 +51,8 @@ def load_prompt_templates(json_path: str | Path = DEFAULT_PROMPTS_JSON) -> dict[
     return data
 
 
-def load_pun_pairs(
-        csv_path: str | Path = DEFAULT_INPUT_CSV,
-        filter_invalid: bool = True,
-) -> pd.DataFrame:
-    """Load pun pairs with schema tolerance across raw seed and Phase 1 CSVs.
+def load_pun_pairs(csv_path: str | Path = DEFAULT_INPUT_CSV) -> pd.DataFrame:
+    """Load pun pairs from a Phase 1 CSV without altering Phase 1 row filtering.
 
     Handles both `sample_spanish_english_pun_pairs.csv` (no pair_id / context_word)
     and finalized Phase 1 exports (`spanglish_pun_pairs_130_clean.csv` / `_final.csv`).
@@ -67,12 +66,6 @@ def load_pun_pairs(
     missing_cols = required_cols - set(df.columns)
     if missing_cols:
         raise ValueError(f"CSV {path} is missing required columns: {sorted(missing_cols)}")
-
-    if filter_invalid and "english_meaning" in df.columns:
-        mask_valid = ~df["english_meaning"].astype(str).str.contains(
-            NON_WORD_PATTERN, case=False, na=False
-        )
-        df = df[mask_valid].copy()
 
     df = df.reset_index(drop=True)
 
@@ -161,18 +154,13 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Format and print prompts offline without calling the Gemini API.",
     )
-    parser.add_argument(
-        "--no-filter",
-        action="store_true",
-        help="Disable filtering of phrase-like / proper-name rows from raw seed CSVs.",
-    )
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
     templates = load_prompt_templates(args.prompts)
-    df = load_pun_pairs(args.input, filter_invalid=not args.no_filter)
+    df = load_pun_pairs(args.input)
     df, leaks = check_few_shot_leakage(df, templates, exclude_leaks=False)
 
     print(
@@ -213,9 +201,12 @@ def main() -> None:
             else:
                 result = generator.generate_for_pair(row, method)
                 print(f"\n--- [{method}] (contains_pw={result['contains_pw']}) ---")
-                if result["masked_sentence"]:
-                    print(f"Stage 1 Masked: {result['masked_sentence']}")
-                print(f"Pun: {result['generated_pun']}")
+                if result["masked_intermediate"]:
+                    print(f"Stage 1 Masked: {result['masked_intermediate']}")
+                if result["error"]:
+                    print(f"Error: {result['error']}")
+                else:
+                    print(f"Pun: {result['generated_pun']}")
 
 
 if __name__ == "__main__":

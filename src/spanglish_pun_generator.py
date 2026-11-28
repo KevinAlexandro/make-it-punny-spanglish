@@ -2,12 +2,20 @@
 
 from __future__ import annotations
 
+from datetime import datetime, timezone
 import os
 import re
 import time
-import pandas as pd
-from typing import Any
-from dotenv import load_dotenv
+from typing import TYPE_CHECKING, Any
+
+try:
+    from dotenv import load_dotenv
+except ImportError:  # pragma: no cover - optional fallback before pip install
+    def load_dotenv() -> bool:
+        return False
+
+if TYPE_CHECKING:
+    import pandas as pd
 
 VALID_METHODS = (
     "baseline",
@@ -20,12 +28,14 @@ VALID_METHODS = (
 class SpanglishPunGenerator:
     """Client wrapper for generating Spanglish puns across all 4 prompting methods."""
 
+    # ToDo - Thinking level should be considered?
     def __init__(
             self,
             templates: dict[str, Any],
             # 2 free options:
             # gemini-4-hydrogen
             # gemini-3.5-flash-lite
+            # gemini-3.8-flash
             model_id: str = "gemini-3.5-flash-lite",
             temperature: float = 0.7,
             top_p: float = 0.95,
@@ -106,11 +116,17 @@ class SpanglishPunGenerator:
             f"### Task\nInput: {user_query}\nOutput:"
         )
 
-    def call_llm(self, prompt_text: str, max_retries: int = 4, base_delay: float = 2.0) -> str:
-        """Invoke the configured Gemini model with exponential backoff retries."""
+    def _call_llm_with_status(
+            self,
+            prompt_text: str,
+            max_retries: int = 4,
+            base_delay: float = 2.0,
+    ) -> tuple[str, str]:
+        """Invoke the configured Gemini model and return (response_text, error_message)."""
         if self.dry_run or self.client is None:
             raise RuntimeError("call_llm() cannot run in dry_run mode.")
 
+        last_error = "max retries exceeded"
         for attempt in range(max_retries):
             try:
                 response = self.client.models.generate_content(
@@ -119,13 +135,20 @@ class SpanglishPunGenerator:
                     config=self.gen_config,
                 )
                 text = (response.text or "").strip()
-                return re.sub(r"\s+", " ", text)
+                return re.sub(r"\s+", " ", text), ""
             except Exception as exc:
-                if attempt == max_retries - 1:
-                    return f"[ERROR: {exc}]"
-                time.sleep(base_delay * (2 ** attempt))
+                last_error = str(exc)
+                if attempt < max_retries - 1:
+                    time.sleep(base_delay * (2 ** attempt))
 
-        return "[ERROR: max retries exceeded]"
+        return "", last_error
+
+    def call_llm(self, prompt_text: str, max_retries: int = 4, base_delay: float = 2.0) -> str:
+        """Invoke the configured Gemini model with exponential backoff retries."""
+        text, error = self._call_llm_with_status(
+            prompt_text, max_retries=max_retries, base_delay=base_delay
+        )
+        return f"[ERROR: {error}]" if error else text
 
     def generate_for_pair(
             self,
@@ -139,26 +162,38 @@ class SpanglishPunGenerator:
         pw = str(row["spanish_word"]).strip()
         aw = str(row["english_word"]).strip()
         cw = str(row.get("context_word", "")).strip()
-        masked_sentence = ""
+        masked_intermediate = ""
+        generated_pun = ""
+        error = ""
 
         if method in ("baseline", "contextually_aligned", "question_answer"):
             prompt = self.format_prompt(method, row)
-            generated_pun = self.call_llm(prompt)
+            generated_pun, error = self._call_llm_with_status(prompt)
         else:
             # Two-stage Subject-Masked workflow
             stage1_prompt = self.format_prompt("subject_masked_stage1", row)
-            masked_sentence = self.call_llm(stage1_prompt)
-            if "[MASK]" not in masked_sentence and not masked_sentence.startswith("[ERROR:"):
-                masked_sentence = re.sub(
-                    rf"\b{re.escape(aw)}\b", "[MASK]", masked_sentence, flags=re.IGNORECASE
+            masked_intermediate, stage1_err = self._call_llm_with_status(stage1_prompt)
+            if stage1_err:
+                error = f"stage1: {stage1_err}"
+            else:
+                if "[MASK]" not in masked_intermediate:
+                    masked_intermediate = re.sub(
+                        rf"\b{re.escape(aw)}\b",
+                        "[MASK]",
+                        masked_intermediate,
+                        flags=re.IGNORECASE,
+                    )
+                stage2_prompt = self.format_prompt(
+                    "subject_masked_stage2", row, masked_sentence=masked_intermediate
                 )
-            stage2_prompt = self.format_prompt(
-                "subject_masked_stage2", row, masked_sentence=masked_sentence
-            )
-            generated_pun = self.call_llm(stage2_prompt)
+                generated_pun, stage2_err = self._call_llm_with_status(stage2_prompt)
+                if stage2_err:
+                    error = f"stage2: {stage2_err}"
 
-        contains_pw = bool(
-            re.search(rf"\b{re.escape(pw)}\b", generated_pun, flags=re.IGNORECASE)
+        contains_pw = (
+            bool(re.search(rf"\b{re.escape(pw)}\b", generated_pun, flags=re.IGNORECASE))
+            if (not error and generated_pun)
+            else False
         )
 
         return {
@@ -167,10 +202,12 @@ class SpanglishPunGenerator:
             "spanish_word": pw,
             "english_word": aw,
             "context_word": cw,
-            "masked_sentence": masked_sentence,
+            "masked_intermediate": masked_intermediate,
             "generated_pun": generated_pun,
-            "contains_pw": contains_pw,
-            "model_id": self.model_id,
+            "model": self.model_id,
             "temperature": self.temperature,
             "prompt_version": self.prompt_version,
+            "contains_pw": contains_pw,
+            "error": error,
+            "timestamp_utc": datetime.now(timezone.utc).isoformat(),
         }
